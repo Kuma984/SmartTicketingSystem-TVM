@@ -8,7 +8,7 @@ Team: Group 02 (3 Members)
 1. PROJECT LINKS
 --------------------------------------------------------------------------------
 - GitHub Repository : https://github.com/Kuma984/SmartTicketingSystem-TVM
-- UI/UX Wireframes  : Detailed Kiosk Specifications (S01-S05) documented in Report Section 4.1
+- Figma Wireframes  : https://www.figma.com/design/NIElQyBErDa84XBUGDsKF9/Untitled?node-id=1-11&t=Ew0H3XM52ZZFSqMb-1
 - Demo Application  : Executable C# WinForms Prototype in /src/SmartTicketingSystem.sln
 
 2. REPOSITORY & PROJECT STRUCTURE

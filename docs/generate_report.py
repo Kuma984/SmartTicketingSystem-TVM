@@ -208,7 +208,7 @@ create_table(team_headers, team_data, [0.6, 1.2, 1.8, 2.2, 0.9])
 meta_headers = ["Project Deliverable", "Access Link / Location", "Status"]
 meta_data = [
     ["GitHub Repository", "https://github.com/Kuma984/SmartTicketingSystem-TVM", "Public / Verified"],
-    ["Figma Wireframes", "https://www.figma.com/file/smart-ticketing-tvm-wireframes", "Complete (S01-S05)"],
+    ["Figma Wireframes", "https://www.figma.com/design/NIElQyBErDa84XBUGDsKF9/Untitled?node-id=1-11&t=Ew0H3XM52ZZFSqMb-1", "Complete (S01-S05)"],
     ["Submission Date", "October 31, 2026", "On Time Submission"]
 ]
 create_table(meta_headers, meta_data, [1.8, 3.8, 1.1])
@@ -681,7 +681,7 @@ add_callout(
     "Course: Software Engineering - Sem 1_2627\n"
     "Team: Group 02 (3 Members) | Deadline: 31 Oct 2026\n"
     "GitHub Repo: https://github.com/Kuma984/SmartTicketingSystem-TVM\n"
-    "Figma Link: https://www.figma.com/file/smart-ticketing-tvm-wireframes\n"
+    "Figma Link: https://www.figma.com/design/NIElQyBErDa84XBUGDsKF9/Untitled?node-id=1-11&t=Ew0H3XM52ZZFSqMb-1\n"
     "Database Script: /docs/TVM_DB.sql executed against (localdb)\\MSSQLLocalDB\n"
     "Visual Studio Solution: /src/SmartTicketingSystem.sln\n"
     "Members: 524K0021 (34%), 523V0016 (33%), 524K0015 (33%) = 100%",

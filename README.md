@@ -3,6 +3,7 @@
 ## Course: Software Engineering Group Assignment 1 (Sem 1_2627)
 - **Instructor:** P.T.K.Trung (`phamthaikytrung@tdtu.edu.vn`)
 - **GitHub Repository:** https://github.com/Kuma984/SmartTicketingSystem-TVM
+- **Figma Wireframes:** https://www.figma.com/design/NIElQyBErDa84XBUGDsKF9/Untitled?node-id=1-11&t=Ew0H3XM52ZZFSqMb-1
 - **Team Members (3 Students):**
   - **524K0021 - Trinh Duc Long** (Team Leader, Architecture & C# Backend)
   - **523V0016 - Vo Thi My Duyen** (Requirements Engineering & UML Modeling)
