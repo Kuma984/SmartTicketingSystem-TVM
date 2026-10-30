@@ -1,0 +1,16 @@
+## Ignore Visual Studio & .NET temporary build files, user settings
+[Bb]in/
+[Oo]bj/
+[Tt]emp/
+.vs/
+*.user
+*.userosscache
+*.sln.docstates
+*.suo
+packages/
+*.nupkg
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.log
