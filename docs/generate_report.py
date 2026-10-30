@@ -1,4 +1,5 @@
 import docx
+import os
 from docx import Document
 from docx.shared import Inches, Pt, RGBColor
 from docx.enum.text import WD_ALIGN_PARAGRAPH
@@ -474,6 +475,36 @@ ui_data = [
     ["S05", "Success / Error Screen", "UC01 Step 8 / UC04", "Success: Green checkmark, simulated printed ticket with barcode. Fail: Red alert, explanation, and auto-reset."]
 ]
 create_table(ui_cols, ui_data, [0.8, 1.6, 1.2, 3.1])
+
+add_heading_3("Kiosk Screen Wireframe Mockups (Screens S01 to S05)")
+add_paragraph("The wireframes below depict the end-to-end visual flow designed for the TVM touchscreen kiosk. An interactive, clickable HTML prototype simulating this exact kiosk experience is provided in docs/figma_mockup_prototype.html.")
+
+wireframe_screens = [
+    ("S01_Home_Welcome.png", "Figure 4.1: Screen S01 — Kiosk Welcome & Idle Screen with Start Touch Trigger"),
+    ("S02_Destination_Menu.png", "Figure 4.2: Screen S02 — Route Selection Grid with Real-time Fare Display"),
+    ("S03_Payment_Mode.png", "Figure 4.3: Screen S03 — Payment Mode Selection (Credit Card vs Digital Wallet QR)"),
+    ("S04_Payment_InProgress.png", "Figure 4.4: Screen S04 — In-Progress Authorization with Card Reader & 120s Timer"),
+    ("S05_Ticket_Issued.png", "Figure 4.5: Screen S05 — Successful Purchase Completion & Barcode Ticket Dispenser")
+]
+
+for img_name, caption in wireframe_screens:
+    wf_path = os.path.join(r"C:\Users\Lenovo\.gemini\antigravity\scratch\SmartTicketingSystem-TVM\docs\screenshots", img_name)
+    if os.path.exists(wf_path):
+        p_wf = doc.add_paragraph()
+        p_wf.alignment = WD_ALIGN_PARAGRAPH.CENTER
+        p_wf.paragraph_format.space_before = Pt(6)
+        p_wf.paragraph_format.space_after = Pt(2)
+        r_wf = p_wf.add_run()
+        r_wf.add_picture(wf_path, width=Inches(5.0))
+
+        p_wf_cap = doc.add_paragraph()
+        p_wf_cap.alignment = WD_ALIGN_PARAGRAPH.CENTER
+        p_wf_cap.paragraph_format.space_after = Pt(10)
+        r_wf_cap = p_wf_cap.add_run(caption)
+        r_wf_cap.font.name = "Calibri"
+        r_wf_cap.font.size = Pt(9.5)
+        r_wf_cap.font.italic = True
+        r_wf_cap.font.color.rgb = COLOR_DARK_GRAY
 
 add_heading_2("4.2 Architectural Design (10 marks)")
 
