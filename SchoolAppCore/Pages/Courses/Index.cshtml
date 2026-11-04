@@ -1,0 +1,33 @@
+@page
+@model SchoolAppCore.Pages.Courses.IndexModel
+@{
+    ViewData["Title"] = "Courses";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h2 class="text-primary">📚 Course Catalog</h2>
+    <span class="badge bg-success fs-6">@Model.Course.Count Active Courses</span>
+</div>
+
+<div class="table-responsive shadow-sm rounded">
+    <table class="table table-striped table-hover align-middle border mb-0">
+        <thead class="table-dark">
+            <tr>
+                <th>Course ID</th>
+                <th>Course Title</th>
+                <th>Credits</th>
+                <th>Academic Department</th>
+            </tr>
+        </thead>
+        <tbody>
+@foreach (var item in Model.Course) {
+            <tr>
+                <td class="fw-bold">CRS-@item.CourseID.ToString("D3")</td>
+                <td>@item.Title</td>
+                <td><span class="badge bg-secondary">@item.Credits Credits</span></td>
+                <td>@(item.Department?.Name ?? "General Studies")</td>
+            </tr>
+}
+        </tbody>
+    </table>
+</div>

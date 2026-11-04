@@ -1,0 +1,32 @@
+@model IEnumerable<SchoolAppCoreMVC.Models.Instructor>
+@{
+    ViewData["Title"] = "Instructors";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-3">
+    <h2 class="text-primary">👨‍🏫 Faculty Instructors (MVC)</h2>
+    <span class="badge bg-info fs-6">@Model.Count() Faculty Members</span>
+</div>
+
+<div class="table-responsive shadow-sm rounded">
+    <table class="table table-striped table-hover align-middle border mb-0">
+        <thead class="table-dark">
+            <tr>
+                <th>Instructor ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Hire Date</th>
+            </tr>
+        </thead>
+        <tbody>
+@foreach (var item in Model) {
+            <tr>
+                <td class="fw-bold">INS-@item.InstructorID.ToString("D3")</td>
+                <td>@item.FirstName</td>
+                <td>@item.LastName</td>
+                <td>@item.HireDate.ToString("yyyy-MM-dd")</td>
+            </tr>
+}
+        </tbody>
+    </table>
+</div>

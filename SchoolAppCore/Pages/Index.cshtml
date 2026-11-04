@@ -1,0 +1,74 @@
+@page
+@model IndexModel
+@{
+    ViewData["Title"] = "School Management Dashboard";
+}
+
+<div class="p-5 mb-4 bg-light rounded-3 shadow-sm border">
+    <div class="container-fluid py-3">
+        <h1 class="display-5 fw-bold text-primary">🏫 School Management System</h1>
+        <p class="col-md-8 fs-5 text-secondary">
+            ASP.NET Core Web Application (Razor Pages) using Entity Framework Core - Database First Approach.
+        </p>
+        <p class="text-muted">
+            <b>Student ID:</b> 524K0021 | <b>Name:</b> Trinh Duc Long | <b>Course:</b> Software Engineering Lab 7
+        </p>
+    </div>
+</div>
+
+<div class="row row-cols-1 row-cols-md-3 g-4 mb-4">
+    <div class="col">
+        <div class="card h-100 border-primary shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title text-primary">👨‍🎓 Students</h5>
+                <p class="card-text text-muted">Manage student admissions, personal records, and enrollment dates.</p>
+                <a asp-page="/Students/Index" class="btn btn-outline-primary w-100">View Students &raquo;</a>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card h-100 border-success shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title text-success">📚 Courses</h5>
+                <p class="card-text text-muted">View academic curriculum, credit allocations, and department offerings.</p>
+                <a asp-page="/Courses/Index" class="btn btn-outline-success w-100">View Courses &raquo;</a>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card h-100 border-info shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title text-info">👨‍🏫 Instructors</h5>
+                <p class="card-text text-muted">Manage faculty members, hiring dates, and academic appointments.</p>
+                <a asp-page="/Instructors/Index" class="btn btn-outline-info w-100">View Instructors &raquo;</a>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card h-100 border-warning shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title text-warning">📝 Enrollments</h5>
+                <p class="card-text text-muted">Track student course registrations and GPA grade evaluations.</p>
+                <a asp-page="/Enrollments/Index" class="btn btn-outline-warning w-100">View Enrollments &raquo;</a>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card h-100 border-secondary shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title text-secondary">🏛 Departments</h5>
+                <p class="card-text text-muted">Manage academic departments, operating budgets, and established dates.</p>
+                <a asp-page="/Departments/Index" class="btn btn-outline-secondary w-100">View Departments &raquo;</a>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card h-100 border-dark shadow-sm">
+            <div class="card-body">
+                <h5 class="card-title text-dark">📊 Academic Report</h5>
+                <p class="card-text text-muted">Generate comprehensive summary statistics and export report data.</p>
+                <a asp-page="/Report" class="btn btn-outline-dark w-100">View Report &raquo;</a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,39 @@
+@model SchoolAppCoreMVC.Controllers.ReportViewModel
+
+@{
+    ViewData["Title"] = "Report";
+}
+
+<h2>📊 Report Summary</h2>
+<div class="row">
+    <div class="col-md-3"><strong>Total Students:</strong> @Model.TotalStudents</div>
+    <div class="col-md-3"><strong>Total Courses:</strong> @Model.TotalCourses</div>
+    <div class="col-md-3"><strong>Total Instructors:</strong> @Model.TotalInstructors</div>
+    <div class="col-md-3"><strong>Total Departments:</strong> @Model.TotalDepartments</div>
+</div>
+<div class="row mt-3">
+    <div class="col-md-3"><strong>Total Enrollments:</strong> @Model.TotalEnrollments</div>
+    <div class="col-md-3"><strong>Average Grade:</strong> @Model.AverageGrade.ToString("0.00")</div>
+</div>
+<h3 class="mt-4">Recent Enrollments</h3>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Enrollment ID</th>
+            <th>Student</th>
+            <th>Course</th>
+            <th>Grade</th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var e in Model.RecentEnrollments)
+    {
+        <tr>
+            <td>@e.EnrollmentID</td>
+            <td>@e.Student?.FirstName @e.Student?.LastName</td>
+            <td>@e.Course?.Title</td>
+            <td>@(e.Grade.HasValue ? e.Grade.Value.ToString() : "N/A")</td>
+        </tr>
+    }
+    </tbody>
+</table>
