@@ -26,10 +26,8 @@ The system allows passengers to:
 ```
 /SmartTicketingSystem-TVM
 ├── docs/
-│   ├── 524K0021_TrinhDucLong.docx     # Comprehensive Word Report
-│   ├── A1_Team_Workbook.xlsx          # Requirements, Q&A, and Tracking Workbook
 │   ├── TVM_DB.sql                     # MSSQL Database Schema and Seed Data
-│   └── readme.txt                     # Submission details and contribution
+│   └── screenshots/                   # Kiosk Touchscreen GUI Screenshots
 └── src/
     ├── SmartTicketingSystem.sln       # Visual Studio Solution
     └── TVM_Demo/                      # C# Windows Forms Application

@@ -14,6 +14,12 @@ ehthumbs.db
 Desktop.ini
 $RECYCLE.BIN/
 *.log
+## Ignore Office & Document files (submission artifacts kept locally)
+*.docx
+*.xlsx
+*.pdf
+*.zip
+
 ~$*
 .~lock.*
 
